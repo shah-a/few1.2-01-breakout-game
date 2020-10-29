@@ -54,8 +54,8 @@ function drawBricks() {
       if (bricks[c][r].status == 1) { // can use status != 0 for multi-hit bricks
         var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
         var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
-        bricks[c][r].x = 0;
-        bricks[c][r].y = 0;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
         ctx.fillStyle = "#0095DD";
